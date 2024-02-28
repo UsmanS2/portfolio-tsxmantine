@@ -1,30 +1,35 @@
 import { Menu, Group, Center, Burger, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
+import { IconMail, IconBrandLinkedin, IconBrandGithub, IconDownload } from '@tabler/icons-react'
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderMenu.module.css';
 
 const links = [
-  { link: '#', label: 'Home' },
+  { link: '#Welcome', label: 'Home' },
   {
     link: '#1',
-    label: 'Learn',
+    label: 'Projects',
     links: [
-      { link: '#', label: 'Documentation' },
-      { link: '/resources', label: 'Resources' },
-      { link: '/community', label: 'Community' },
-      { link: '/blog', label: 'Blog' },
+      { link: '#', label: 'ComfortFlow' },
+      { link: '/resources', label: 'Portfolio Website' },
+      { link: '/community', label: 'Maze Generator' },
+      
     ],
   },
-  { link: '/about', label: 'About' },
-  { link: '/pricing', label: 'Pricing' },
+  { link: '/about', 
+  label: 'Experience',
+  links: [
+    { link: '/faq', label: <> <IconDownload size="0.9rem" /> Resume </> },
+  ]
+  },
   {
     link: '#2',
-    label: 'Support',
+    label: 'Socials',
     links: [
-      { link: '/faq', label: 'FAQ' },
-      { link: '/demo', label: 'Book a demo' },
-      { link: '/forums', label: 'Forums' },
+      { link: '/faq', label: <IconMail size="0.9rem" /> },
+      { link: '/demo', label: <IconBrandLinkedin size="0.9rem" /> },
+      { link: '/forums', label: <IconBrandGithub size="0.9rem" /> },
     ],
   },
 ];
@@ -73,7 +78,7 @@ export function HeaderMenu() {
     <header className={classes.header}>
       <Container size="md">
         <div className={classes.inner}>
-          <MantineLogo size={28} />
+          <MantineLogo size={0} />
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>

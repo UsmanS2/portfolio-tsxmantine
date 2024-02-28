@@ -4,19 +4,15 @@ import classes from './Welcome.module.css';
 export function Welcome() {
   return (
     <>
-      <Title className={classes.title} ta="center" mt={100}>
-        Welcome to{' '}
+      <Title className={classes.title} ta="left" mt={100}>
+        Hi, I'm {' '}
         <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-          Mantine
+          Usman Shafi
         </Text>
       </Title>
-      <Text c="dimmed" ta="center" size="lg" maw={580} mx="auto" mt="xl">
-        This starter Vite project includes a minimal setup, if you want to learn more on Mantine +
-        Vite integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/vite/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit pages/Home.page.tsx file.
+      <Text c="dimmed" ta="left" size="lg" maw={580} mx="md" mt="xl" style={{ paddingLeft: '200px' }}>
+        Business Computer Information Systems Student focused on learning, growing, and thriving{' '}
+        
       </Text>
     </>
   );

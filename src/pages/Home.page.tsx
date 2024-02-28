@@ -12,10 +12,13 @@ export function HomePage() {
         <HeaderMenu />
       </AppShell.Header>
       <AppShell.Main>
-        <div id = "Welcome">
-        <Welcome />
-        <ColorSchemeToggle />
-        </div>
+        <section id = "Welcome">
+          <Welcome />
+          {/* <ColorSchemeToggle /> */}
+        </section>
+        <section id = 'Project Grid'>
+          
+        </section>
         <Welcome />
         <Welcome />
         <Welcome />
