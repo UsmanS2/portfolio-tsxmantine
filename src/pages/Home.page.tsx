@@ -2,6 +2,7 @@ import { AppShell } from '@mantine/core';
 import { Welcome } from '../components/Welcome/Welcome';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import { HeaderMenu } from '@/components/Header/HeaderMenu';
+import ProjectsGallery from '@/components/ProjectGrid/ProjectGrid';
 
 export function HomePage() {
   return (
@@ -17,7 +18,7 @@ export function HomePage() {
           {/* <ColorSchemeToggle /> */}
         </section>
         <section id = 'Project Grid'>
-          
+          <ProjectsGallery />
         </section>
         <Welcome />
         <Welcome />
