@@ -23,15 +23,18 @@ const links = [
     { link: '/faq', label: <> <IconDownload size="0.9rem" /> Resume </> },
   ]
   },
-  {
-    link: '#2',
-    label: 'Socials',
-    links: [
-      { link: '/faq', label: <IconMail size="0.9rem" /> },
-      { link: '/demo', label: <IconBrandLinkedin size="0.9rem" /> },
-      { link: '/forums', label: <IconBrandGithub size="0.9rem" /> },
-    ],
-  },
+  { link: '/faq', label: <> <IconMail size="0.9rem" />  </> },
+  { link: '/demo', label: <> <IconBrandLinkedin size="0.9rem" />  </> },
+  { link: '/forums', label: <> <IconBrandGithub size="0.9rem" />  </> },
+  // {
+  //   link: '#2',
+  //   label: 'Socials',
+  //   links: [
+  //     { link: '/faq', label: <IconMail size="0.9rem" /> },
+  //     { link: '/demo', label: <IconBrandLinkedin size="0.9rem" /> },
+  //     { link: '/forums', label: <IconBrandGithub size="0.9rem" /> },
+  //   ],
+  // },
 ];
 
 export function HeaderMenu() {

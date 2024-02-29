@@ -24,19 +24,21 @@ import { project } from '../ProjectGrid/ProjectGrid';
 interface badgeCardProps {
     project: project
 }
+//   const { image, title, description, country, badges } = mockdata;
 
 export function BadgeCard({ project }: badgeCardProps) {
-//   const { image, title, description, country, badges } = mockdata;
   
-    // <Badge variant="light" key={key} leftSection={project.emoji}>
-    //   {project.label}
-    // </Badge>
+  const features = project.icons.map((icon) => (
+    <Badge variant="light" key={icon.label} leftSection={icon.emoji}>
+      {icon.label}
+    </Badge>
+  ));
   
 
   return (
     <Card withBorder radius="md" p="md" className={classes.card}>
       <Card.Section>
-        <Image src={project.image} alt={project.title} height={180} />
+        <Image src={project.image} alt={project.title} height={180} width={450}/>
       </Card.Section>
 
       <Card.Section className={classes.section} mt="md">
@@ -55,11 +57,13 @@ export function BadgeCard({ project }: badgeCardProps) {
 
       <Card.Section className={classes.section}>
         <Text mt="md" className={classes.label} c="dimmed">
-          Perfect for you, if you enjoy
+          Technologies used
         </Text>
-        {/* <Group gap={7} mt={5}>
-          {project.icons}
-        </Group> */}
+        <div className="badgeContainer">
+        <Group gap={7} mt={5}>
+          {features}
+        </Group>
+        </div>
       </Card.Section>
 
       <Group mt="xs">
