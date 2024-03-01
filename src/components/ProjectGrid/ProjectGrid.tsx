@@ -74,7 +74,7 @@ function ProjectsGallery() {
       </Title>
     <Grid justify="center" >
       {projects.map((project, index) => (
-        <Grid.Col key={index} span={{ base: 20, md: 6, lg: 4 }}>
+        <Grid.Col key={index} span={{ base: 2, md: 6, lg: 5 }}>
         <BadgeCard project={project} />
       </Grid.Col>
       ))}

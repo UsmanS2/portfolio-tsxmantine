@@ -24,8 +24,8 @@ const links = [
   ]
   },
   { link: '/faq', label: <> <IconMail size="0.9rem" />  </> },
-  { link: '/demo', label: <> <IconBrandLinkedin size="0.9rem" />  </> },
-  { link: '/forums', label: <> <IconBrandGithub size="0.9rem" />  </> },
+  { link: 'www.linkedin.com/in/ushafi', label: <> <IconBrandLinkedin size="0.9rem" />  </> },
+  { link: 'https://github.com/UsmanS2', label: <> <IconBrandGithub size="0.9rem" />  </> },
   // {
   //   link: '#2',
   //   label: 'Socials',
