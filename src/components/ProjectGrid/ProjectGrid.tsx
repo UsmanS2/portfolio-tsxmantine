@@ -1,8 +1,22 @@
 import React from 'react';
-import { Grid, Text, Title } from '@mantine/core';
-import { IconBrandReact, IconBrandReactNative, IconBrandTypescript, IconDiamond, IconArrowNarrowDown } from '@tabler/icons-react';
+import { Grid, Text, Title, rem, useMantineTheme, } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
+import {
+  IconBrandReact,
+  IconBrandReactNative,
+  IconBrandTypescript,
+  IconDiamond,
+  IconArrowNarrowDown,
+  IconAugmentedReality2,
+  IconBrandUnity,
+  IconBrandCSharp,
+  IconHash,
+} from '@tabler/icons-react';
 import { BadgeCard } from '../BadgeCard/BadgeCard';
 import classes from './ProjectGrid.module.css';
+import FadingIcon from '../FadeIcon/FadeIcon';
+import portfoliopic from '../../assets/portfolioSS.png'
+import { useMediaQuery } from '@mantine/hooks';
 
 interface icon {
     emoji: JSX.Element;
@@ -25,7 +39,7 @@ const projects: project[] = [
     {
       image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
       title: 'ComfortFlow',
-      description: 'Built a mobile app which accurately displays medical statistics such as Body Temperature, Skin Conductance, Heart Rate, and Pressure Points on the body using piezoelectric sensors built into bed sheets. Then generates mobility exercises based off current data and diagnosis',
+      description: 'This innovative mobile application revolutionizes personal health monitoring by accurately displaying vital medical statistics, including Body Temperature, Skin Conductance, Heart Rate, and Pressure Points. Developed using React Native and TypeScript, the app offers a seamless and intuitive user experience across various mobile platforms, ensuring wide accessibility and ease of use.',
       category: '#1 Overall Hackathon Winner',
       icons: [
         { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
@@ -35,20 +49,31 @@ const projects: project[] = [
       ],
     },
     {
-      image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
-      title: 'ComfortFlow',
-      description: 'Built a mobile app which accurately displays medical statistics such as Body Temperature, Skin Conductance, Heart Rate, and Pressure Points on the body using piezoelectric sensors built into bed sheets. Then generates mobility exercises based off current data and diagnosis',
-      category: '#1 Overall Hackathon Winner',
+      image: portfoliopic,
+      title: 'Portfolio Website',
+      description: 'This portfolio website is a sophisticated showcase of professional skills and projects, meticulously developed using React and TypeScript to ensure robust and scalable application architecture. Leveraging the power of Mantine, a modern and comprehensive React component library, the website boasts an elegant and responsive design, ensuring an exceptional user experience across all devices.',
+      category: 'Personal',
       icons: [
-        { emoji: <IconBrandReact />, label: 'React' },
-        { emoji: <IconBrandReactNative />, label: 'React-Native' },
+        { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
+        { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
         // Add other badges
+      ],
+    },
+    {
+      image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/236/258/datas/medium.png',
+      title: 'NuVu',
+      description: 'This cutting-edge mobile application offers a revolutionary approach to the car buying experience, enabling users to visualize and interact with potential car purchases through advanced augmented reality (AR) technology. Developed in Unity and programmed in C#, the app harnesses the power of Google\'s ARCore to create immersive, realistic AR visualizations of cars, allowing users to explore various models and features in lifelike detail from the comfort of their own environment.',
+      category: 'HackDFW Participant',
+      icons: [
+        { emoji: <IconAugmentedReality2  />, label: 'Augmented Reality' },
+        { emoji: <IconBrandUnity  />, label: 'Unity' },
+        { emoji: <IconHash  />, label: 'C#' },
       ],
     },
     {
       image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
       title: 'ComfortFlow',
-      description: 'Built a mobile app which accurately displays medical statistics such as Body Temperature, Skin Conductance, Heart Rate, and Pressure Points on the body using piezoelectric sensors built into bed sheets. Then generates mobility exercises based off current data and diagnosis',
+      description: 'This innovative mobile application revolutionizes personal health monitoring by accurately displaying vital medical statistics, including Body Temperature, Skin Conductance, Heart Rate, and Pressure Points. Developed using React Native and TypeScript, the app offers a seamless and intuitive user experience across various mobile platforms, ensuring wide accessibility and ease of use.',
       category: '#1 Overall Hackathon Winner',
       icons: [
         { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
@@ -61,10 +86,21 @@ const projects: project[] = [
   ];
 
 function ProjectsGallery() {
+
+  const theme = useMantineTheme();
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
+  const slides = projects.map((project, index) => (
+    <Carousel.Slide key={index}>
+      <BadgeCard project={project} />
+    </Carousel.Slide>
+  ));
+
+
   return (
     <>
     <div className='downArrow'>
-      <IconArrowNarrowDown size="15rem" />
+      {/* <IconArrowNarrowDown size="15rem" /> */}
+      <FadingIcon />
     </div>
     <Title className={classes.title} ta="right" mt={-50} mr={150} mb={50}>
         My {' '}
@@ -72,13 +108,30 @@ function ProjectsGallery() {
           Projects
         </Text>
       </Title>
-    <Grid justify="center" >
+
+
+    {/* <Grid justify="center" >
       {projects.map((project, index) => (
         <Grid.Col key={index} span={{ base: 2, md: 6, lg: 5 }}>
         <BadgeCard project={project} />
       </Grid.Col>
       ))}
-    </Grid>
+    </Grid> */}
+
+    
+
+  {/* return ( */}
+    <Carousel
+      // slideSize={{ base: '100%', sm: '50%' }}
+      // slideGap={{ base: rem(2), sm: 'xl' }}
+      // align="start"
+      // slidesToScroll={mobile ? 1 : 2}
+    >
+      {slides}
+    </Carousel>
+  
+
+
     </>
   );
 }

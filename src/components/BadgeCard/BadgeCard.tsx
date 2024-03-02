@@ -1,9 +1,17 @@
-import { IconHeart, IconBrandPython, IconBrandTypescript, IconBrandReact, IconBrandReactNative, IconDiamond, TablerIconsProps, IconBrandGithub, IconGitBranch } from '@tabler/icons-react';
+import {
+  IconHeart,
+  IconBrandPython,
+  IconBrandTypescript,
+  IconBrandReact,
+  IconBrandReactNative,
+  IconDiamond,
+  TablerIconsProps,
+  IconBrandGithub,
+  IconGitBranch,
+} from '@tabler/icons-react';
 import { Card, Image, Text, Group, Badge, Button, ActionIcon } from '@mantine/core';
 import classes from './BadgeCard.module.css';
 import { project } from '../ProjectGrid/ProjectGrid';
-
-
 
 // const mockdata = {
 //   image:
@@ -22,23 +30,21 @@ import { project } from '../ProjectGrid/ProjectGrid';
 // };
 
 interface badgeCardProps {
-    project: project
+  project: project;
 }
 //   const { image, title, description, country, badges } = mockdata;
 
 export function BadgeCard({ project }: badgeCardProps) {
-  
   const features = project.icons.map((icon) => (
     <Badge variant="light" key={icon.label} leftSection={icon.emoji}>
       {icon.label}
     </Badge>
   ));
-  
 
   return (
-    <Card withBorder radius="md" p="md" className={classes.card}>
+    <Card withBorder radius="lg" p="md" className={classes.card}>
       <Card.Section>
-        <Image src={project.image} alt={project.title} height={180} width={450}/>
+        <Image src={project.image} alt={project.title} height={160} width={450} />
       </Card.Section>
 
       <Card.Section className={classes.section} mt="md">
@@ -60,9 +66,9 @@ export function BadgeCard({ project }: badgeCardProps) {
           Technologies used
         </Text>
         <div className="badgeContainer">
-        <Group gap={7} mt={5}>
-          {features}
-        </Group>
+          <Group gap={7} mt={5}>
+            {features}
+          </Group>
         </div>
       </Card.Section>
 

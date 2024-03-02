@@ -1,7 +1,7 @@
 import { Menu, Group, Center, Burger, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
-import { IconMail, IconBrandLinkedin, IconBrandGithub, IconDownload } from '@tabler/icons-react'
+import { IconMail, IconBrandLinkedin, IconBrandGithub, IconDownload } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderMenu.module.css';
 
@@ -14,18 +14,50 @@ const links = [
       { link: '#', label: 'ComfortFlow' },
       { link: '/resources', label: 'Portfolio Website' },
       { link: '/community', label: 'Maze Generator' },
-      
     ],
   },
-  { link: '/about', 
-  label: 'Experience',
-  links: [
-    { link: '/faq', label: <> <IconDownload size="0.9rem" /> Resume </> },
-  ]
+  {
+    link: '/about',
+    label: 'Experience',
+    links: [
+      {
+        link: '/faq',
+        label: (
+          <>
+            {' '}
+            <IconDownload size="0.9rem" /> Resume{' '}
+          </>
+        ),
+      },
+    ],
   },
-  { link: '/faq', label: <> <IconMail size="0.9rem" />  </> },
-  { link: 'www.linkedin.com/in/ushafi', label: <> <IconBrandLinkedin size="0.9rem" />  </> },
-  { link: 'https://github.com/UsmanS2', label: <> <IconBrandGithub size="0.9rem" />  </> },
+  {
+    link: '/faq',
+    label: (
+      <>
+        {' '}
+        <IconMail size="0.9rem" />{' '}
+      </>
+    ),
+  },
+  {
+    link: 'www.linkedin.com/in/ushafi',
+    label: (
+      <>
+        {' '}
+        <IconBrandLinkedin size="0.9rem" />{' '}
+      </>
+    ),
+  },
+  {
+    link: 'https://github.com/UsmanS2',
+    label: (
+      <>
+        {' '}
+        <IconBrandGithub size="0.9rem" />{' '}
+      </>
+    ),
+  },
   // {
   //   link: '#2',
   //   label: 'Socials',
