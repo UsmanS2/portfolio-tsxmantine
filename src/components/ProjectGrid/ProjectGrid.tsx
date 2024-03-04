@@ -24,6 +24,7 @@ interface icon {
 }
 
 export interface project {
+    id: string;
     image: string;
     title: string;
     description: string;
@@ -37,6 +38,7 @@ interface badgeCardProps {
 
 const projects: project[] = [
     {
+      id: 'project1',
       image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
       title: 'ComfortFlow',
       description: 'This innovative mobile application revolutionizes personal health monitoring by accurately displaying vital medical statistics, including Body Temperature, Skin Conductance, Heart Rate, and Pressure Points. Developed using React Native and TypeScript, the app offers a seamless and intuitive user experience across various mobile platforms, ensuring wide accessibility and ease of use.',
@@ -49,6 +51,7 @@ const projects: project[] = [
       ],
     },
     {
+      id: 'project2',
       image: portfoliopic,
       title: 'Portfolio Website',
       description: 'This portfolio website is a sophisticated showcase of professional skills and projects, meticulously developed using React and TypeScript to ensure robust and scalable application architecture. Leveraging the power of Mantine, a modern and comprehensive React component library, the website boasts an elegant and responsive design, ensuring an exceptional user experience across all devices.',
@@ -60,6 +63,7 @@ const projects: project[] = [
       ],
     },
     {
+      id: 'project3',
       image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/236/258/datas/medium.png',
       title: 'NuVu',
       description: 'This cutting-edge mobile application offers a revolutionary approach to the car buying experience, enabling users to visualize and interact with potential car purchases through advanced augmented reality (AR) technology. Developed in Unity and programmed in C#, the app harnesses the power of Google\'s ARCore to create immersive, realistic AR visualizations of cars, allowing users to explore various models and features in lifelike detail from the comfort of their own environment.',
@@ -71,6 +75,7 @@ const projects: project[] = [
       ],
     },
     {
+      id: 'project4',
       image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
       title: 'ComfortFlow',
       description: 'This innovative mobile application revolutionizes personal health monitoring by accurately displaying vital medical statistics, including Body Temperature, Skin Conductance, Heart Rate, and Pressure Points. Developed using React Native and TypeScript, the app offers a seamless and intuitive user experience across various mobile platforms, ensuring wide accessibility and ease of use.',
@@ -89,10 +94,11 @@ function ProjectsGallery() {
 
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
-  const slides = projects.map((project, index) => (
-    <Carousel.Slide key={index}>
+  const slides = projects.map((project) => (
+    <Carousel.Slide key={project.id}>
       <BadgeCard project={project} />
     </Carousel.Slide>
+    
   ));
 
 
@@ -121,14 +127,21 @@ function ProjectsGallery() {
     
 
   {/* return ( */}
+  <div className='carouselContainer'>
     <Carousel
-      // slideSize={{ base: '100%', sm: '50%' }}
-      // slideGap={{ base: rem(2), sm: 'xl' }}
-      // align="start"
-      // slidesToScroll={mobile ? 1 : 2}
+      // maw={rem(200)}
+      withIndicators
+      m={rem(100)}
+      slideSize={{ base: '20%', sm: '10%', md: '10%', lg: '20%' }}
+      slideGap={{ base: rem(2), sm: 'xl' }}
+      align="start"
+      slidesToScroll={mobile ? 1 : 3}
+      loop
+      dragFree
     >
       {slides}
     </Carousel>
+    </div>
   
 
 

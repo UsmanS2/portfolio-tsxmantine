@@ -9,7 +9,7 @@ import {
   IconBrandGithub,
   IconGitBranch,
 } from '@tabler/icons-react';
-import { Card, Image, Text, Group, Badge, Button, ActionIcon } from '@mantine/core';
+import { Card, Image, Text, Group, Badge, Button, ActionIcon, rem } from '@mantine/core';
 import classes from './BadgeCard.module.css';
 import { project } from '../ProjectGrid/ProjectGrid';
 
@@ -42,7 +42,7 @@ export function BadgeCard({ project }: badgeCardProps) {
   ));
 
   return (
-    <Card withBorder radius="lg" p="md" className={classes.card}>
+    <Card withBorder mr={rem(75)} ml={rem(75)} radius="lg" p="md" className={classes.card} >
       <Card.Section>
         <Image src={project.image} alt={project.title} height={160} width={450} />
       </Card.Section>

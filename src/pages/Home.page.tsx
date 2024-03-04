@@ -4,6 +4,7 @@ import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeTo
 import { HeaderMenu } from '@/components/Header/HeaderMenu';
 import ProjectsGallery from '@/components/ProjectGrid/ProjectGrid';
 import ExperienceTimeline from '@/components/Experience/ExperienceTimeline';
+import { GetInTouchSimple } from '@/components/Contact/Contact';
 
 
 export function HomePage() {
@@ -14,19 +15,24 @@ export function HomePage() {
           <HeaderMenu />
         </AppShell.Header>
         <AppShell.Main>
+
           <section id="Welcome">
             <Welcome />
             {/* <ColorSchemeToggle /> */}
           </section>
+
           <section id="Project Grid">
             <ProjectsGallery />
           </section>
+
           < section id="Experience">
           <ExperienceTimeline />
           </section>
-          <Welcome />
-          <Welcome />
-          <Welcome />
+
+          <section id="Contact">
+            <GetInTouchSimple />
+          </section>
+          
           <ColorSchemeToggle />
         </AppShell.Main>
       </AppShell>
