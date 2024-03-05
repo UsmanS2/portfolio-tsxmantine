@@ -1,4 +1,4 @@
-import { TextInput, Textarea, SimpleGrid, Group, Title, Button } from '@mantine/core';
+import { TextInput, Textarea, SimpleGrid, Group, Title, Button, rem } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
 export function GetInTouchSimple() {
@@ -24,11 +24,12 @@ export function GetInTouchSimple() {
         style={{ fontFamily: 'Greycliff CF, var(--mantine-font-family)' }}
         fw={900}
         ta="center"
+        mt={rem(100)}
       >
         Get in touch
       </Title>
 
-      <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
+      <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl" mx={rem(150)}>
         <TextInput
           label="Name"
           placeholder="Your name"
@@ -51,6 +52,7 @@ export function GetInTouchSimple() {
         mt="md"
         name="subject"
         variant="filled"
+        mx={rem(150)}
         {...form.getInputProps('subject')}
       />
       <Textarea
@@ -62,10 +64,11 @@ export function GetInTouchSimple() {
         autosize
         name="message"
         variant="filled"
+        mx={rem(150)}
         {...form.getInputProps('message')}
       />
 
-      <Group justify="center" mt="xl">
+      <Group justify="center" mt="xl" mb={rem(100)}>
         <Button type="submit" size="md">
           Send message
         </Button>

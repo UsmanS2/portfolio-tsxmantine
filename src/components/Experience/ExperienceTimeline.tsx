@@ -1,18 +1,24 @@
-import { Timeline, Text } from '@mantine/core';
+import { Timeline, Text, rem } from '@mantine/core';
 import { IconGitBranch, IconGitPullRequest, IconGitCommit, IconMessageDots } from '@tabler/icons-react';
 import { useHover } from '@mantine/hooks';
 function ExperienceTimeline() {
   const { hovered, ref } = useHover();
+  const hoverRef1 = useHover();
+  const hoverRef2 = useHover();
+  const hoverRef3 = useHover();
+  const hoverRef4 = useHover();
+  
   return (
-    <Timeline active={1} bulletSize={24} lineWidth={2}>
+    <Timeline active={1} bulletSize={24} lineWidth={2} ml={rem(150)}>
       <Timeline.Item bullet={<IconGitBranch size={12} />} title="New branch" ref={ref}>
         <Text c="dimmed" size="sm">You&apos;ve created new branch <Text variant="link" component="span" inherit>fix-notifications</Text> from master</Text>
-        {hovered ? <><Text>yes</Text></> : <><Text>no</Text></>}
+        {hovered ? <><Text>yes</Text></> : <><Text></Text></>}
         <Text size="xs" mt={4}>2 hours ago</Text>
       </Timeline.Item>
 
-      <Timeline.Item bullet={<IconGitCommit size={12} />} title="Commits">
+      <Timeline.Item bullet={<IconGitCommit size={12} />} title="Commits" ref={hoverRef1.ref}>
         <Text c="dimmed" size="sm">You&apos;ve pushed 23 commits to<Text variant="link" component="span" inherit>fix-notifications branch</Text></Text>
+        {hoverRef1.hovered ? <><Text>yes</Text></> : <><Text>no</Text></>}
         <Text size="xs" mt={4}>52 minutes ago</Text>
       </Timeline.Item>
 
