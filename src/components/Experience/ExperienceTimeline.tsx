@@ -9,28 +9,44 @@ function ExperienceTimeline() {
   const hoverRef4 = useHover();
   
   return (
-    <Timeline active={1} bulletSize={24} lineWidth={2} ml={rem(150)}>
-      <Timeline.Item bullet={<IconGitBranch size={12} />} title="New branch" ref={ref}>
-        <Text c="dimmed" size="sm">You&apos;ve created new branch <Text variant="link" component="span" inherit>fix-notifications</Text> from master</Text>
+    <Timeline active={4} bulletSize={24} lineWidth={2} ml={rem(150)}>
+      <Timeline.Item bullet={<IconGitBranch size={12} />} title="How it started" ref={ref}>
+        <Text c="dimmed" size="sm">Took my first programming class </Text>{/*<Text variant="link" component="span" inherit>fix-notifications</Text> from master</Text>*/}
         {hovered ? <><Text>yes</Text></> : <><Text></Text></>}
-        <Text size="xs" mt={4}>2 hours ago</Text>
+        <Text size="xs" mt={4}>2017-2018</Text>
       </Timeline.Item>
 
-      <Timeline.Item bullet={<IconGitCommit size={12} />} title="Commits" ref={hoverRef1.ref}>
-        <Text c="dimmed" size="sm">You&apos;ve pushed 23 commits to<Text variant="link" component="span" inherit>fix-notifications branch</Text></Text>
+      <Timeline.Item bullet={<IconGitCommit size={12} />} title="My First Job" ref={hoverRef1.ref}>
+        <Text c="dimmed" size="sm">Started working at Code Ninjas <Text variant="link" component="span" inherit></Text></Text>
         {hoverRef1.hovered ? <><Text>yes</Text></> : <><Text>no</Text></>}
-        <Text size="xs" mt={4}>52 minutes ago</Text>
+        <Text size="xs" mt={4}>June 2018</Text>
       </Timeline.Item>
 
-      <Timeline.Item title="Pull request" bullet={<IconGitPullRequest size={12} />} lineVariant="dashed">
-        <Text c="dimmed" size="sm">You&apos;ve submitted a pull request<Text variant="link" component="span" inherit>Fix incorrect notification message (#187)</Text></Text>
-        <Text size="xs" mt={4}>34 minutes ago</Text>
+      <Timeline.Item title="My Second Job" bullet={<IconGitPullRequest size={12} />} lineVariant="dashed">
+        <Text c="dimmed" size="sm">Started working at theCoderSchool<Text variant="link" component="span" inherit></Text></Text>
+        <Text size="xs" mt={4}>October 2020</Text>
       </Timeline.Item>
 
       <Timeline.Item title="Code review" bullet={<IconMessageDots size={12} />}>
-        <Text c="dimmed" size="sm"><Text variant="link" component="span" inherit>Robert Gluesticker</Text> left a code review on your pull request</Text>
-        <Text size="xs" mt={4}>12 minutes ago</Text>
+        <Text c="dimmed" size="sm">Spent a summer as the Interim General Manager<Text variant="link" component="span" inherit></Text></Text>
+        <Text size="xs" mt={4}>May 2023 - August 2023</Text>
       </Timeline.Item>
+
+      <Timeline.Item title="My First Internship" bullet={<IconMessageDots size={12} />}>
+        <Text c="dimmed" size="sm">Started as a Software Developer Intern at the Axle Group<Text variant="link" component="span" inherit></Text></Text>
+        <Text size="xs" mt={4}>March 2024 - Present</Text>
+      </Timeline.Item>
+
+      <Timeline.Item title="Looking For More Oppurtunities" bullet={<IconMessageDots size={12} />}>
+        <Text c="dimmed" size="sm">Looking to expand my skills and experience<Text variant="link" component="span" inherit></Text></Text>
+        <Text size="xs" mt={4}>Summer and Fall 2024</Text>
+      </Timeline.Item>
+
+      <Timeline.Item title="Expected Graduation" bullet={<IconMessageDots size={12} />}>
+        <Text c="dimmed" size="sm">Finish Undergrad!<Text variant="link" component="span" inherit></Text></Text>
+        <Text size="xs" mt={4}>December 2024</Text>
+      </Timeline.Item>
+
     </Timeline>
   );
 }
