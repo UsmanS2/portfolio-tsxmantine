@@ -26,7 +26,7 @@ export function GetInTouchSimple() {
         ta="center"
         mt={rem(100)}
       >
-        Get in touch
+        Get in touch with Me!
       </Title>
 
       <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl" mx={rem(150)}>

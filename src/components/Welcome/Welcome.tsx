@@ -10,8 +10,11 @@ export function Welcome() {
           Usman Shafi
         </Text>
       </Title>
-      <Text c="dimmed" ta="left" size="lg" maw={580} mx="md" mt="xl" ml={250}>
-        Business Computer Information Systems Student focused on learning, growing, and thriving{' '}
+      <Text c="dimmed" ta="left" size="lg" maw={650} mx="md" mt="xl" ml={250}>
+        Software Developer, Business Computer Information Systems Student, Innovator {' '}
+      </Text>
+      <Text c="dimmed" ta="left" size="lg" maw={580} mx="md" mt="sm" ml={250}>
+        focused on learning, growing, and thriving {' '}
       </Text>
     </>
   );
