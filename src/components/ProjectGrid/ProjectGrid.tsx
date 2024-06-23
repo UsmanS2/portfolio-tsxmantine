@@ -135,7 +135,7 @@ function ProjectsGallery() {
       slideSize={{ base: '20%', sm: '10%', md: '10%', lg: '20%' }}
       slideGap={{ base: rem(2), sm: 'xl' }}
       align="start"
-      slidesToScroll={mobile ? 1 : 3}
+      slidesToScroll={mobile ? 1 : 2}
       loop
       dragFree
     >
