@@ -2,6 +2,14 @@ import { TextInput, Textarea, SimpleGrid, Group, Title, Button, rem } from '@man
 import { useForm } from '@mantine/form';
 import emailjs from 'emailjs-com';
 
+type FormValues = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
+
 export function GetInTouchSimple() {
   const form = useForm({
     initialValues: {
@@ -17,7 +25,7 @@ export function GetInTouchSimple() {
     },
   });
 
-  const sendEmail = (values) => {
+  const sendEmail = (values: FormValues) => {
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', values, 'YOUR_USER_ID')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
