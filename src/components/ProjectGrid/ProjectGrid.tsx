@@ -11,11 +11,13 @@ import {
   IconBrandUnity,
   IconBrandCSharp,
   IconHash,
+  IconApi,
 } from '@tabler/icons-react';
 import { BadgeCard } from '../BadgeCard/BadgeCard';
 import classes from './ProjectGrid.module.css';
 import FadingIcon from '../FadeIcon/FadeIcon';
-import portfoliopic from '../../assets/portfolioSS.png'
+import portfoliopic from '../../assets/portfolioSS.png';
+import spotifyLeaderboardpic from '../../assets/SpotifyLeaderboardpic.png';
 import { useMediaQuery } from '@mantine/hooks';
 
 interface icon {
@@ -52,6 +54,19 @@ const projects: project[] = [
     },
     {
       id: 'project2',
+      image: spotifyLeaderboardpic,
+      title: 'Spotify Leaderboard',
+      description: 'This app showcases the top-streamed songs on Spotify, allowing users to view detailed statistics for each track. The project involves the creation of a custom API connected to a database, which stores and serves real-time data about each song\'s performance across various platforms like Spotify, YouTube, and TikTok. The API was developed using Node.js with TypeScript, and the frontend is built using React and Mantine for a modern and responsive user interface. This project demonstrates full-stack development skills, including API development, database management, and seamless integration between the backend and frontend.',
+      category: 'Personal',
+      icons: [
+        { emoji: <IconApi size="1.1rem" />, label: 'Api' },
+        { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
+        { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
+        // Add other badges
+      ],
+    },
+    {
+      id: 'project4',
       image: portfoliopic,
       title: 'Portfolio Website',
       description: 'This portfolio website is a sophisticated showcase of professional skills and projects, meticulously developed using React and TypeScript to ensure robust and scalable application architecture. Leveraging the power of Mantine, a modern and comprehensive React component library, the website boasts an elegant and responsive design, ensuring an exceptional user experience across all devices.',
@@ -63,7 +78,19 @@ const projects: project[] = [
       ],
     },
     {
-      id: 'project3',
+      id: 'project5',
+      image: portfoliopic,
+      title: 'Portfolio Website',
+      description: 'This portfolio website is a sophisticated showcase of professional skills and projects, meticulously developed using React and TypeScript to ensure robust and scalable application architecture. Leveraging the power of Mantine, a modern and comprehensive React component library, the website boasts an elegant and responsive design, ensuring an exceptional user experience across all devices.',
+      category: 'Personal',
+      icons: [
+        { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
+        { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
+        // Add other badges
+      ],
+    },
+    {
+      id: 'project6',
       image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/236/258/datas/medium.png',
       title: 'NuVu',
       description: 'This cutting-edge mobile application offers a revolutionary approach to the car buying experience, enabling users to visualize and interact with potential car purchases through advanced augmented reality (AR) technology. Developed in Unity and programmed in C#, the app harnesses the power of Google\'s ARCore to create immersive, realistic AR visualizations of cars, allowing users to explore various models and features in lifelike detail from the comfort of their own environment.',
@@ -72,19 +99,6 @@ const projects: project[] = [
         { emoji: <IconAugmentedReality2  />, label: 'Augmented Reality' },
         { emoji: <IconBrandUnity  />, label: 'Unity' },
         { emoji: <IconHash  />, label: 'C#' },
-      ],
-    },
-    {
-      id: 'project4',
-      image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
-      title: 'ComfortFlow',
-      description: 'This innovative mobile application revolutionizes personal health monitoring by accurately displaying vital medical statistics, including Body Temperature, Skin Conductance, Heart Rate, and Pressure Points. Developed using React Native and TypeScript, the app offers a seamless and intuitive user experience across various mobile platforms, ensuring wide accessibility and ease of use.',
-      category: '#1 Overall Hackathon Winner',
-      icons: [
-        { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
-        { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
-        { emoji: <IconBrandReactNative size="1.1rem" />, label: 'React-Native' },
-        { emoji: <IconDiamond  />, label: 'Ruby' },
       ],
     },
     // Add more projects as needed
@@ -133,7 +147,7 @@ function ProjectsGallery() {
       withIndicators
       m={rem(100)}
       slideSize={{ base: '20%', sm: '10%', md: '10%', lg: '20%' }}
-      slideGap={{ base: rem(2), sm: 'xl' }}
+      slideGap={{ base: 'xl' }}
       align="start"
       slidesToScroll={mobile ? 1 : 2}
       loop
