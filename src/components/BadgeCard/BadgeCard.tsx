@@ -56,7 +56,7 @@ export function BadgeCard({ project }: badgeCardProps) {
       </Card.Section>
 
       <Group mt="xs">
-        <Button radius="md" style={{ flex: 1 }}>
+      <Button radius="md" style={{ flex: 1 }} component="a" href={project.githubLink} target="_blank">
           Show details
         </Button>
         <ActionIcon variant="default" radius="md" size={36}>

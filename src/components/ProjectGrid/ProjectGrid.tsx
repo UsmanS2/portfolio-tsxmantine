@@ -6,10 +6,8 @@ import {
   IconBrandReactNative,
   IconBrandTypescript,
   IconDiamond,
-  IconArrowNarrowDown,
   IconAugmentedReality2,
   IconBrandUnity,
-  IconBrandCSharp,
   IconHash,
   IconApi,
 } from '@tabler/icons-react';
@@ -18,6 +16,8 @@ import classes from './ProjectGrid.module.css';
 import FadingIcon from '../FadeIcon/FadeIcon';
 import portfoliopic from '../../assets/portfolioSS.png';
 import spotifyLeaderboardpic from '../../assets/SpotifyLeaderboardpic.png';
+import tftpic from '../../assets/tftTitle.jpg';
+
 import { useMediaQuery } from '@mantine/hooks';
 
 interface icon {
@@ -32,6 +32,7 @@ export interface project {
     description: string;
     category: string;
     icons: icon[];
+    githubLink: string;
 }
 
 interface badgeCardProps {
@@ -51,6 +52,7 @@ const projects: project[] = [
         { emoji: <IconBrandReactNative size="1.1rem" />, label: 'React-Native' },
         { emoji: <IconDiamond  />, label: 'Ruby' },
       ],
+      githubLink: 'https://github.com/UsmanS2/AxxessApp2024',
     },
     {
       id: 'project2',
@@ -64,6 +66,7 @@ const projects: project[] = [
         { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
         // Add other badges
       ],
+      githubLink: 'https://github.com/UsmanS2/SpotifyLeaderboard',
     },
     {
       id: 'project4',
@@ -76,18 +79,21 @@ const projects: project[] = [
         { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
         // Add other badges
       ],
+      githubLink: 'https://github.com/UsmanS2/portfolio-tsxmantine',
     },
     {
       id: 'project5',
-      image: portfoliopic,
-      title: 'Portfolio Website',
-      description: 'This portfolio website is a sophisticated showcase of professional skills and projects, meticulously developed using React and TypeScript to ensure robust and scalable application architecture. Leveraging the power of Mantine, a modern and comprehensive React component library, the website boasts an elegant and responsive design, ensuring an exceptional user experience across all devices.',
+      image: tftpic,
+      title: 'TFT Stats and AI App',
+      description: 'Developed a web application that enables users to search for a Teamfight Tactics summoner and view detailed information about their last 5 matches. The app integrates with the Riot API to fetch match data and displays key details such as match placement, team compositions, and player performance. Leveraging AI, the app analyzes historical match data to predict future outcomes and likely team compositions, providing users with actionable insights. Built with React and Mantine on the frontend, and powered by an Express.js backend for handling API requests and AI model deployment.',
       category: 'Personal',
-      icons: [
+      icons: [        
+        { emoji: <IconApi size="1.1rem" />, label: 'Api' },
         { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
         { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
         // Add other badges
       ],
+      githubLink: 'https://github.com/UsmanS2/tft-stat-checker',
     },
     {
       id: 'project6',
@@ -100,6 +106,7 @@ const projects: project[] = [
         { emoji: <IconBrandUnity  />, label: 'Unity' },
         { emoji: <IconHash  />, label: 'C#' },
       ],
+      githubLink: 'https://devpost.com/software/nuvu-dhewks',
     },
     // Add more projects as needed
   ];

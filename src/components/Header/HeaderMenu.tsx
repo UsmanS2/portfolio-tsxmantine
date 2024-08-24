@@ -15,6 +15,7 @@ const links = [
       { link: 'https://github.com/UsmanS2/AxxessApp2024', label: 'ComfortFlow' },
       { link: 'https://github.com/UsmanS2/SpotifyLeaderboard', label: 'Spotify Leaderboard' },
       { link: 'https://github.com/UsmanS2/tft-stat-checker', label: 'TFT Stats and AI App' },
+      { link: 'https://devpost.com/software/nuvu-dhewks', label: 'NuVu' },
     ],
   },
   {
