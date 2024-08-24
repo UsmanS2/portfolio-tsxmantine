@@ -23,7 +23,7 @@ const links = [
     label: 'Experience',
     links: [
       {
-        link: '/resume', // Use the actual path to your resume file here
+        link: 'src/assets/Usman_Shafi_Resume.pdf',
         label: (
           <>
             <IconDownload size="0.9rem" /> Resume
@@ -57,7 +57,7 @@ export function HeaderMenu() {
   const items = links.map((link) => {
     if (link.links) {
       const menuItems = link.links.map((item, index) => (
-        <Menu.Item key={item.link || index}> // Adding index as a fallback key
+        <Menu.Item key={item.link || index}>
           <a href={item.link} target="_blank" rel="noopener noreferrer">
             {item.label}
           </a>
