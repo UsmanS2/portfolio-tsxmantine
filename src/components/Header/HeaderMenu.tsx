@@ -23,7 +23,7 @@ const links = [
     label: 'Experience',
     links: [
       {
-        link: 'src/assets/Usman_Shafi_Resume.pdf',
+        link: '/Usman_Shafi_Resume.pdf',
         label: (
           <>
             <IconDownload size="0.9rem" /> Resume
