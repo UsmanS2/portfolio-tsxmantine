@@ -13,26 +13,9 @@ import { Card, Image, Text, Group, Badge, Button, ActionIcon, rem } from '@manti
 import classes from './BadgeCard.module.css';
 import { project } from '../ProjectGrid/ProjectGrid';
 
-// const mockdata = {
-//   image:
-//     'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
-//   title: 'ComfortFlow',
-//   country: '',
-//   description:
-//     'Built a mobile app which accurately displays medical statistics such as Body Temperature, Skin Conductance, Heart Rate, and Pressure Points on the body using piezoelectric sensors built into bed sheets. Then generates mobility exercises based off current data and diagnosis',
-//   badges: [
-//     { emoji: <IconBrandPython  />, label: 'Python' },
-//     { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
-//     { emoji: <IconBrandReact  />, label: 'React' },
-//     { emoji: <IconBrandReactNative  />, label: 'React-Native' },
-//     { emoji: <IconDiamond  />, label: 'Ruby' },
-//   ],
-// };
-
 interface badgeCardProps {
   project: project;
 }
-//   const { image, title, description, country, badges } = mockdata;
 
 export function BadgeCard({ project }: badgeCardProps) {
   const features = project.icons.map((icon) => (
@@ -73,7 +56,7 @@ export function BadgeCard({ project }: badgeCardProps) {
       </Card.Section>
 
       <Group mt="xs">
-        <Button radius="md" style={{ flex: 1 }}>
+      <Button radius="md" style={{ flex: 1 }} component="a" href={project.githubLink} target="_blank">
           Show details
         </Button>
         <ActionIcon variant="default" radius="md" size={36}>

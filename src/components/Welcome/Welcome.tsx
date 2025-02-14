@@ -1,4 +1,4 @@
-import { Title, Text, Anchor } from '@mantine/core';
+import { Title, Text } from '@mantine/core';
 import classes from './Welcome.module.css';
 
 export function Welcome() {
@@ -10,8 +10,13 @@ export function Welcome() {
           Usman Shafi
         </Text>
       </Title>
-      <Text c="dimmed" ta="left" size="lg" maw={580} mx="md" mt="xl" ml={250}>
-        Business Computer Information Systems Graduate focused on learning, growing, and thriving{' '}
+
+      <Text c="dimmed" ta="left" size="lg" maw={650} mx="md" mt="xl" ml={250}>
+        Software Developer, Business Computer Information Systems Student, Innovator.
+      </Text>
+
+      <Text c="dimmed" ta="left" size="lg" maw={580} mx="md" mt="sm" ml={250}>
+        Focused on learning, growing, and thriving.
       </Text>
     </>
   );

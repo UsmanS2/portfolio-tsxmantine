@@ -21,15 +21,15 @@ export function HomePage() {
             {/* <ColorSchemeToggle /> */}
           </section>
 
-          <section id="Project Grid">
+          <section id="projects">
             <ProjectsGallery />
           </section>
 
-          < section id="Experience">
+          < section id="about">
           <ExperienceTimeline />
           </section>
 
-          <section id="Contact">
+          <section id="contact">
             <GetInTouchSimple />
           </section>
           

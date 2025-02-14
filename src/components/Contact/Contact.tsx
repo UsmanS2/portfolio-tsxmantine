@@ -1,5 +1,14 @@
 import { TextInput, Textarea, SimpleGrid, Group, Title, Button, rem } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import emailjs from 'emailjs-com';
+
+type FormValues = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
+
 
 export function GetInTouchSimple() {
   const form = useForm({
@@ -16,8 +25,19 @@ export function GetInTouchSimple() {
     },
   });
 
+  const sendEmail = (values: FormValues) => {
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', values, 'YOUR_USER_ID')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully!');
+      }, (error) => {
+        console.log('FAILED...', error);
+        alert('Failed to send message, please try again later.');
+      });
+  };
+
   return (
-    <form onSubmit={form.onSubmit(() => {})}>
+    <form onSubmit={form.onSubmit(sendEmail)}>
       <Title
         order={2}
         size="h1"
@@ -26,7 +46,7 @@ export function GetInTouchSimple() {
         ta="center"
         mt={rem(100)}
       >
-        Get in touch
+        Get in touch with Me!
       </Title>
 
       <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl" mx={rem(150)}>
