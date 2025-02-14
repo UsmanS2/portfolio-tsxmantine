@@ -11,7 +11,7 @@ export function Welcome() {
         </Text>
       </Title>
       <Text c="dimmed" ta="left" size="lg" maw={580} mx="md" mt="xl" ml={250}>
-        Business Computer Information Systems Student focused on learning, growing, and thriving{' '}
+        Business Computer Information Systems Graduate focused on learning, growing, and thriving{' '}
       </Text>
     </>
   );

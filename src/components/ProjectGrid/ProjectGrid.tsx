@@ -11,11 +11,18 @@ import {
   IconBrandUnity,
   IconBrandCSharp,
   IconHash,
+  IconFlask,
+  IconDatabase,
+  IconBrandDocker,
+  IconBrandAws,
+  IconBrandTerraform,
 } from '@tabler/icons-react';
 import { BadgeCard } from '../BadgeCard/BadgeCard';
 import classes from './ProjectGrid.module.css';
 import FadingIcon from '../FadeIcon/FadeIcon';
 import portfoliopic from '../../assets/portfolioSS.png'
+import calmcompaniondog from '../../assets/calmCompanionDog.png'
+import propertunitypic from '../../assets/Propertunitypic.png'
 import { useMediaQuery } from '@mantine/hooks';
 
 interface icon {
@@ -42,12 +49,41 @@ const projects: project[] = [
       image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
       title: 'ComfortFlow',
       description: 'This innovative mobile application revolutionizes personal health monitoring by accurately displaying vital medical statistics, including Body Temperature, Skin Conductance, Heart Rate, and Pressure Points. Developed using React Native and TypeScript, the app offers a seamless and intuitive user experience across various mobile platforms, ensuring wide accessibility and ease of use.',
-      category: '#1 Overall Hackathon Winner',
+      category: 'Hackathon Winner',
       icons: [
         { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
         { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
         { emoji: <IconBrandReactNative size="1.1rem" />, label: 'React-Native' },
         { emoji: <IconDiamond  />, label: 'Ruby' },
+      ],
+    },
+    {
+      id: 'project5',
+      image: calmcompaniondog,
+      title: 'Calm Companion',
+      description: 'Developed a health and wellness platform for students, integrating SMU’s mental health resources. The system, built using TypeScript, Flask, and MongoDB, was containerized with Docker and deployed using AWS ECS and Terraform. Implemented real-time step tracking and a friends feature while securing global access through Cloudflare.',
+      category: 'Hackathon Winner',
+      icons: [
+        { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
+        { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
+        { emoji: <IconFlask  />, label: 'Flask' },
+        { emoji: <IconDatabase  />, label: 'MongoDB' },
+        { emoji: <IconBrandDocker  />, label: 'Docker' },
+        { emoji: <IconBrandAws  />, label: 'AWS ECS' },
+        { emoji: <IconBrandTerraform  />, label: 'Terraform' },
+        // Add other badges
+      ],
+    },
+    {
+      id: 'project6',
+      image: propertunitypic,
+      title: 'Propertunity',
+      description: 'Created an AI-driven property management platform using TypeScript, React, Next.js, Flask, and MongoDB. Designed predictive models to forecast maintenance needs, incorporating weather data for proactive planning. Implemented domain-based automatic user routing with Firebase for a seamless user experience.',
+      category: 'Hackathon Winner',
+      icons: [
+        { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
+        { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
+        // Add other badges
       ],
     },
     {
@@ -72,19 +108,6 @@ const projects: project[] = [
         { emoji: <IconAugmentedReality2  />, label: 'Augmented Reality' },
         { emoji: <IconBrandUnity  />, label: 'Unity' },
         { emoji: <IconHash  />, label: 'C#' },
-      ],
-    },
-    {
-      id: 'project4',
-      image: 'https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/774/237/datas/medium.png',
-      title: 'ComfortFlow',
-      description: 'This innovative mobile application revolutionizes personal health monitoring by accurately displaying vital medical statistics, including Body Temperature, Skin Conductance, Heart Rate, and Pressure Points. Developed using React Native and TypeScript, the app offers a seamless and intuitive user experience across various mobile platforms, ensuring wide accessibility and ease of use.',
-      category: '#1 Overall Hackathon Winner',
-      icons: [
-        { emoji: <IconBrandTypescript  />, label: 'TypeScript' },
-        { emoji: <IconBrandReact size="1.1rem" />, label: 'React' },
-        { emoji: <IconBrandReactNative size="1.1rem" />, label: 'React-Native' },
-        { emoji: <IconDiamond  />, label: 'Ruby' },
       ],
     },
     // Add more projects as needed
